@@ -8,13 +8,14 @@ export default class FooterColumnComponent {
     // This one is to force the concrete class(component)'s constructor to call parent(base component)'s constructor.
     constructor(private component: Locator) {
         this.component = component;
+        this.component.scrollIntoViewIfNeeded();
     }
 
     title(): Locator{
         return this.component.locator(this.titleSel);
     }
 
-    async link(): Promise<Locator[]>{
+    links(): Promise<Locator[]>{
         return this.component.locator(this.linkSel).all();
     }
 }

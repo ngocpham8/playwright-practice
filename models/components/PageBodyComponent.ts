@@ -1,5 +1,5 @@
 import { Locator, Page } from "@playwright/test";
-import ProductItemComponent from "../ProductItemComponent";
+import ProductItemComponent from "./ProductItemComponent";
 
 export default class PageBodyComponent {
     public static selector = '.page-body';
